@@ -11,10 +11,6 @@
 #include <vector>
 
 namespace Graph_lib {
-// defense against ill-behaved Linux macros:
-#undef major
-#undef minor
-
 struct Color {
 	enum Color_type {
 		red=FL_RED, blue=FL_BLUE, green=FL_GREEN,
