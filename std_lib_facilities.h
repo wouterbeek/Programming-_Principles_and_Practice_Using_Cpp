@@ -65,23 +65,10 @@ struct Range_error : out_of_range {	// enhanced vector range error reporting
 	Range_error(int i) :out_of_range("Range error: "+to_string(i)), index(i) { }
 };
 
-
 // trivially range-checked vector (no iterator checking):
 template< class T> struct Vector : public std::vector<T> {
 	using size_type = typename std::vector<T>::size_type;
-
-#ifdef _MSC_VER
-	// microsoft doesn't yet support C++11 inheriting constructors
-	Vector() { }
-	explicit Vector(size_type n) :std::vector<T>(n) {}
-	Vector(size_type n, const T& v) :std::vector<T>(n,v) {}
-	template <class I>
-	Vector(I first, I last) : std::vector<T>(first, last) {}
-	Vector(initializer_list<T> list) : std::vector<T>(list) {}
-#else
 	using std::vector<T>::vector;	// inheriting constructor
-#endif
-
 	T& operator[](unsigned int i) // rather than return at(i);
 	{
 		if (i<0||this->size()<=i) throw Range_error(i);
@@ -93,7 +80,6 @@ template< class T> struct Vector : public std::vector<T> {
 		return std::vector<T>::operator[](i);
 	}
 };
-
 // disgusting macro hack to get a range checked vector:
 #define vector Vector
 
