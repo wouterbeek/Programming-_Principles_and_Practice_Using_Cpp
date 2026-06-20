@@ -1,7 +1,7 @@
 #ifndef WINDOW_GUARD
 #define WINDOW_GUARD 1
 
-#include <fltk.hpp>
+#include <FL/Fl_Window.H>
 #include <Graph_lib/Point.hpp>
 #include <std_lib_facilities.hpp>
 

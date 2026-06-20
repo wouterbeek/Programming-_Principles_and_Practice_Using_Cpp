@@ -6,7 +6,9 @@
 #ifndef GUI_GUARD
 #define GUI_GUARD
 
-#include <fltk.hpp>
+#include <FL/Fl_Button.H> 
+#include <FL/Fl_Input.H>
+#include <FL/Fl_Output.H>
 #include <Graph_lib/Graph.hpp>
 #include <Graph_lib/Point.hpp>
 #include <Graph_lib/Window.hpp>

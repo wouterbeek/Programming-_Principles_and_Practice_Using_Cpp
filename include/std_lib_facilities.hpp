@@ -175,7 +175,7 @@ inline void simple_error(string s)	// write ``error: s and exit program
 {
 	cerr << "error: " << s << '\n';
 	keep_window_open();		// for some Windows environments
-	exit(1);
+	std::exit(1);
 }
 
 // make std::min() and std::max() accessible on systems with antisocial macros:

@@ -2,7 +2,10 @@
 #ifndef GRAPH_GUARD
 #define GRAPH_GUARD 1
 
-#include <fltk.hpp>
+#include <FL/Enumerations.H>
+#include <FL/fl_draw.H>
+#include <Fl/Fl_GIF_Image.H>
+#include <Fl/Fl_JPEG_Image.H>
 #include <Graph_lib/Point.hpp>
 #include <std_lib_facilities.hpp>
 #include <vector>
