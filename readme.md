@@ -22,6 +22,32 @@ Notice that the forward slashes (Linux) should be backward slashes on Windows.
 
 This section documents the fixes that were applied relative to the original code.
 
+## Fix 1 - Case-sensitivity of file names
+
+The original Git repository cannot be cloned on Windows, because the filesystem there does not distinguish between the files 'GUI.h' and 'Gui.h':
+
+```
+Cloning into 'Programming-_Principles_and_Practice_Using_Cpp'...
+remote: Enumerating objects: 2357, done.
+remote: Total 2357 (delta 0), reused 0 (delta 0), pack-reused 2357 (from 1)
+Receiving objects: 100% (2357/2357), 22.75 MiB | 8.69 MiB/s, done.
+Resolving deltas: 100% (1088/1088), done.
+warning: the following paths have collided (e.g. case-sensitive paths
+on a case-insensitive filesystem) and only one from the same
+colliding group is in the working tree:
+
+  'GUI.h'
+  'Gui.h'
+```
+
+## Fix 2 - Duplicate implementations
+
+The original Git repository could not compile because some methods had duplicate declarations and/or duplicate definitions (e.g. both in the '*.h' and in the '*.cpp' file).  These duplicates were removed.
+
+## Fix 3 - Missing imports
+
+The original Git repository could not compile because some imports were missing.  These missing imports were added.
+
 # Appendices
 
 ## Appendix A: Compiler output of the original code
