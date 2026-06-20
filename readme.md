@@ -42,11 +42,15 @@ colliding group is in the working tree:
 
 ## Fix 2 - Duplicate implementations
 
-The original Git repository could not compile because some methods had duplicate declarations and/or duplicate definitions (e.g. both in the '*.h' and in the '*.cpp' file).  These duplicates were removed.
+The original Git repository could not compile, because some methods had duplicate declarations and/or duplicate definitions (e.g. both in the '*.h' and in the '*.cpp' file).  These duplicates were removed.
 
 ## Fix 3 - Missing imports
 
-The original Git repository could not compile because some imports were missing.  These missing imports were added.
+The original Git repository could not compile, because some imports were missing.  These missing imports were added.
+
+## Fix 4 - Reliance on implicit conversions
+
+The original Git repository could not compile, because it relied on implicit conversions, some of which had been removed from the C++ language.  An example is a return of std::ifstream, which used to return void* which implicitly casts to bool.
 
 # Changes
 
@@ -55,6 +59,25 @@ This section documents the changes that were applied replative to the original c
 ## Change 1 - Added chapter 12 examples
 
 The running text of Chapter 12 of the PPP book includes a lot of examples that use `Simple_window` and `Graph`.  These examples were added in the executable 'main.exe'.
+
+## Change 2 - Added build system and dependency management
+
+The original Git repository did not detail how the code was built, or how the FLTK-dependency was pulled in and configured.  This repository automates these things with CMake and Conan.
+
+## Change 3 - Only include headers that are needed
+
+The original Git repository used to include a lot of header files pro-actively (e.g. fltk.h).  This included a lot of header files that were not specifically used for particular compilation units.  This repository only imports headers that are specifically needed for compiling any compilation unit.
+
+## Change 4 - Include and source directories
+
+The original Git repository used to store all files in a flat directory.  This repository places headers in an 'include'-directory, library source files in a 'src'-directory, and executable source files in a 'tool'-directory.
+
+## Change 5 - Assume a modern build environment
+
+The original Git repository included workarounds for known limitations that existed in 2014.  This repository assumes that you are using a more modern build environment.  For example, the following workarounds were removed:
+
+  - A workaround for MSVC-versions that do not support C++11.
+  - A workaround for glibc libraries prior to 2.28 (2018).
 
 # Appendices
 
