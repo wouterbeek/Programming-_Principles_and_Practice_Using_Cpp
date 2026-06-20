@@ -21,11 +21,7 @@ struct Simple_window : Window {
 private:
 	bool button_pushed;
 	
-	static void cb_next(Address, Address addr) // callback for next_button
-	//	{ reference_to<Simple_window>(addr).next(); }
-	{
-		static_cast<Simple_window*>(addr)->next();
-	}
+	static void cb_next(Address, Address addr); // callback for next_button
 
 	void next() { button_pushed = true; }
 
