@@ -23,6 +23,6 @@ private:
 	
 	static void cb_next(Address, Address addr); // callback for next_button
 
-	void next() { button_pushed = true; }
+	void next();
 
 };
