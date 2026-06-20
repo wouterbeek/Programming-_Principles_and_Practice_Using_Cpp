@@ -32,3 +32,13 @@ target_sources(ppp
     Simple_window.cpp
     Window.cpp
 )
+
+add_executable(main)
+target_link_libraries(main
+  PRIVATE
+    ${PROJECT_NAME}::ppp
+)
+target_sources(main
+  PRIVATE
+    tool/main.cpp
+)

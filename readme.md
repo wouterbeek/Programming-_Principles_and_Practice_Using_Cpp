@@ -48,6 +48,14 @@ The original Git repository could not compile because some methods had duplicate
 
 The original Git repository could not compile because some imports were missing.  These missing imports were added.
 
+# Changes
+
+This section documents the changes that were applied replative to the original code.
+
+## Change 1 - Added chapter 12 examples
+
+The running text of Chapter 12 of the PPP book includes a lot of examples that use `Simple_window` and `Graph`.  These examples were added in the executable 'main.exe'.
+
 # Appendices
 
 ## Appendix A: Compiler output of the original code
