@@ -1,4 +1,4 @@
-#include "GUI.h"
+#include "GUI.hpp"
 #include "std_lib_facilities.h"
 #include <sstream>
 
@@ -50,11 +50,6 @@ void Out_box::attach(Window& win)
 {
 	pw = new Fl_Output(loc.x, loc.y, width, height, label.c_str());
 	own = &win;
-}
-
-Menu::Menu(Point xy, int w, int h, Kind kk, const string& s)
-:Widget(xy,w,h,s,0), k(kk), offset(0)
-{
 }
 
 int Menu::attach(Button& b)

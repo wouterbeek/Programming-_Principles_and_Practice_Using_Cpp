@@ -6,7 +6,7 @@
 #include "std_lib_facilities.h"
 
 #include "Point.h"
-//#include "GUI.h"
+//#include "GUI.hpp"
 
 namespace Graph_lib {
 
