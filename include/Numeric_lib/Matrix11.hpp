@@ -3,6 +3,8 @@
     warning: this small multidimensional matrix library uses a few features
     not taught in ENGR112 and not explained in elementary textbooks
 
+	C++11 version
+
     (c) Bjarne Stroustrup, Texas A&M University. 
 
     Use as you like as long as you acknowledge the source.
@@ -11,9 +13,8 @@
 #ifndef MATRIX_LIB
 #define MATRIX_LIB
 
-#include<string>
-#include<algorithm>
-//#include<iostream>
+#include <algorithm>
+#include <string>
 
 namespace Numeric_lib {
 

@@ -1,6 +1,6 @@
 #include <cstdlib>
-#include <Simple_window.h>
-#include <Graph.h>
+#include <Graph_lib/Graph.hpp>
+#include <Graph_lib/Simple_window.hpp>
 
 auto main() -> int
 {

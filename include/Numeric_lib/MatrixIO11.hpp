@@ -1,6 +1,6 @@
 
 #include <iostream>
-#include "Matrix.h"
+#include <Numeric_lib/Matrix.hpp>
 
 namespace Numeric_lib {
 

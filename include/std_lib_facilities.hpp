@@ -1,5 +1,5 @@
 /*
-   std_lib_facilities.h
+   std_lib_facilities.hpp
 */
 
 /*
@@ -24,23 +24,22 @@
 #ifndef H112
 #define H112 251113L
 
-
-#include<iostream>
-#include<iomanip>
-#include<fstream>
-#include<sstream>
-#include<cmath>
-#include<cstdlib>
-#include<string>
-#include<list>
-#include <forward_list>
-#include<vector>
-#include<unordered_map>
-#include<algorithm>
+#include <algorithm>
 #include <array>
+#include <cmath>
+#include <cstdlib>
+#include <forward_list>
+#include <fstream>
+#include <iomanip>
+#include <iostream>
+#include <list>
+#include <random>
 #include <regex>
-#include<random>
-#include<stdexcept>
+#include <sstream>
+#include <stdexcept>
+#include <string>
+#include <unordered_map>
+#include <vector>
 
 //------------------------------------------------------------------------------
 

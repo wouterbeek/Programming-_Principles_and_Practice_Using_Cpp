@@ -19,7 +19,7 @@ find_package(fltk REQUIRED)
 
 add_library(ppp STATIC)
 add_library(${PROJECT_NAME}::ppp ALIAS ppp)
-target_include_directories(ppp PUBLIC ${CMAKE_SOURCE_DIR})
+target_include_directories(ppp PUBLIC include)
 target_link_libraries(ppp
   PUBLIC
     fltk::fltk
@@ -27,10 +27,10 @@ target_link_libraries(ppp
 )
 target_sources(ppp
   PRIVATE
-    Graph.cpp
-    GUI.cpp
-    Simple_window.cpp
-    Window.cpp
+    src/Graph_lib/Graph.cpp
+    src/Graph_lib/GUI.cpp
+    src/Graph_lib/Simple_window.cpp
+    src/Graph_lib/Window.cpp
 )
 
 add_executable(main)

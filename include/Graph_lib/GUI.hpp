@@ -6,12 +6,10 @@
 #ifndef GUI_GUARD
 #define GUI_GUARD
 
-#include "Point.h"
-#include "fltk.h"
-#include "Window.h"
-#include "Graph.h"
-//#include<vector>
-//#include<string>
+#include <fltk.hpp>
+#include <Graph_lib/Graph.hpp>
+#include <Graph_lib/Point.hpp>
+#include <Graph_lib/Window.hpp>
 
 namespace Graph_lib {
 	typedef void* Address;    // Address is a synonym for void*

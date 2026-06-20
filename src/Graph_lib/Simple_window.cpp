@@ -4,7 +4,7 @@
 // "Programming -- Principles and Practice Using C++" by Bjarne Stroustrup
 //
 
-#include "Simple_window.h"
+#include <Graph_lib/Simple_window.hpp>
 
 //------------------------------------------------------------------------------
 
