@@ -8,6 +8,9 @@
   "configurePresets": [
     {
       "binaryDir": "${sourceDir}/build/${presetName}",
+      "cacheVariables": {
+        "CMAKE_EXPORT_COMPILE_COMMANDS": "ON"
+      },
       "hidden": true,
       "installDir": "${sourceDir}/install/${presetName}",
       "name": "base",
