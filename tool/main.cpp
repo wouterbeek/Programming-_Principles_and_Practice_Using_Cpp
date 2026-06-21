@@ -1,9 +1,8 @@
-#include <cstdlib>
 #include <Graph_lib/Graph.hpp>
 #include <Graph_lib/Simple_window.hpp>
+#include <cstdlib>
 
-auto main() -> int
-{
+auto main() -> int {
   using namespace Graph_lib;
 
   // Section 12.7.2 An almost blank window
