@@ -20,11 +20,7 @@ find_package(fltk REQUIRED)
 add_library(ppp STATIC)
 add_library(${PROJECT_NAME}::ppp ALIAS ppp)
 target_include_directories(ppp PUBLIC include)
-target_link_libraries(ppp
-  PUBLIC
-    fltk::fltk
-    ${PROJECT_NAME}::base
-)
+target_link_libraries(ppp PUBLIC fltk::fltk ${PROJECT_NAME}::base)
 target_sources(ppp
   PRIVATE
     src/Graph_lib/Graph.cpp
@@ -33,12 +29,10 @@ target_sources(ppp
     src/Graph_lib/Window.cpp
 )
 
-add_executable(main)
-target_link_libraries(main
-  PRIVATE
-    ${PROJECT_NAME}::ppp
-)
-target_sources(main
-  PRIVATE
-    tool/main.cpp
-)
+add_executable(chapter12)
+target_link_libraries(chapter12 PRIVATE ${PROJECT_NAME}::ppp)
+target_sources(chapter12 PRIVATE tool/chapter12.cpp)
+
+add_executable(chapter13)
+target_link_libraries(chapter13 PRIVATE ${PROJECT_NAME}::ppp)
+target_sources(chapter13 PRIVATE tool/chapter13.cpp)
