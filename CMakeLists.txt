@@ -1,7 +1,7 @@
-﻿cmake_minimum_required(VERSION 4.3.2)
+﻿cmake_minimum_required(VERSION 4.3.4)
 project(ppp-cpp
-  DESCRIPTION "A very simple boilerplate for cross-OS C++ compilation with dependency management."
-  HOMEPAGE_URL https://github.com/wouterbeek/cpp-boilerplate
+  DESCRIPTION "Programming Principles and Practice using C++"
+  HOMEPAGE_URL https://github.com/wouterbeek/Programming-_Principles_and_Practice_Using_Cpp
   LANGUAGES CXX
   VERSION 0.1.0
 )
